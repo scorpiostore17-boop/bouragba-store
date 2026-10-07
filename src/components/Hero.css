@@ -1,0 +1,232 @@
+/* ===================================================
+   BOURAGBA STORE - MINIMALIST HERO
+   Zero Shadows, Clean Borders, Slightly Rounded Radius
+   =================================================== */
+
+.store-hero {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  margin: 1.5rem 0 2.5rem 0;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: var(--gray-100);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 1.25rem;
+}
+
+.hero-badge-icon {
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+/* Title */
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title-highlight {
+  display: block;
+  color: var(--primary);
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+}
+
+/* Description */
+.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Actions */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 2.75rem;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid var(--primary);
+  transition: var(--transition);
+}
+
+.btn-hero-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  color: var(--gray-800);
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.btn-hero-secondary:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+  color: var(--gray-900);
+}
+
+.btn-hero-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  color: #16a34a;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid #bbf7d0;
+  transition: var(--transition);
+}
+
+.btn-hero-whatsapp:hover {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+/* Trust Pillars */
+.hero-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  text-align: right;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem;
+  background: var(--gray-50);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.pillar-item:hover {
+  background: #ffffff;
+  border-color: var(--gray-400);
+}
+
+.pillar-icon-box {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.pillar-text h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.pillar-text p {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  line-height: 1.45;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-title-highlight {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .store-hero {
+    padding: 2rem 1.25rem;
+    margin: 1rem 0 1.75rem 0;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-title-highlight {
+    font-size: 1.25rem;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .hero-pillars {
+    grid-template-columns: 1fr;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-hero-primary,
+  .btn-hero-secondary,
+  .btn-hero-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,194 @@
+/* ===================================================
+   BOURAGBA STORE - PRODUCT CARD
+   Minimalist, Zero Shadows, Crisp Borders, Rounded
+   =================================================== */
+
+.product-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Image */
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--border);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.04);
+}
+
+/* Badges */
+.badge-new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--gray-900);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+
+.badge-discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+
+.badge-low-stock {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+/* Info */
+.product-info {
+  padding: 1rem;
+}
+
+.product-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.product-brand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stock-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stock-status.in-stock {
+  color: #16a34a;
+}
+
+.stock-status.out-of-stock {
+  color: #dc2626;
+}
+
+.product-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.product-price {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+.product-old-price {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+/* Fixed Circular Add-to-Cart Button (Bottom-Left) */
+.product-cart-btn-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.product-cart-btn-circle:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: scale(1.08);
+}
+
+.product-cart-btn-circle:active {
+  transform: scale(0.92);
+}
+
+@media (max-width: 480px) {
+  .product-info {
+    padding: 0.75rem;
+  }
+  .product-name {
+    font-size: 0.85rem;
+  }
+  .product-price {
+    font-size: 0.95rem;
+  }
+}
