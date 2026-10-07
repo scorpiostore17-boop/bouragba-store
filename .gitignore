@@ -1,3 +1,14 @@
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# SQLite Database
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
 # Logs
 logs
 *.log
